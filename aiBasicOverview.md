@@ -112,7 +112,7 @@ ThinkTrees themselves are particular instances of ThinkTreeDefs that are replica
 
 ## Constant vs non-constant ThinkTrees
 
-Each pawn will actually possess 2 ThinkTrees, their primary ThinkTree and a ConstantThinkTree. Primarily this constant ThinkTree is a reduced set of autonomous responses that is evaluated first. As an example 
+Each pawn will actually possess 2 ThinkTrees, their primary ThinkTree and a ConstantThinkTree. Primarily this constant ThinkTree is a reduced set of autonomous responses that will be evaluated first. As an example 
 
 ```xml
 <ThinkTreeDef>
@@ -141,3 +141,5 @@ Each pawn will actually possess 2 ThinkTrees, their primary ThinkTree and a Cons
 Thus the most pressing concerns for a Pawn are fleeing an explosion and their basic hostility response. 
 
 *NOTE* When drafted, a pawn will not evaluate their constant ThinkTree, as their autonomy has been removed.
+
+*NOTE* Any logic placed in a ConstantThinkTree should be easily interruptible, preferably stateless
