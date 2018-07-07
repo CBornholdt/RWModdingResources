@@ -162,7 +162,7 @@ Presently if you wish to add behavior to a particular PawnKindDef or new race, t
 *NOTE* If taking the latter course of action, place those checks immediately in the Giver, so that your ThinkTree does not needless slow down unintended pawns.
 
 ## The final piece for pawn behavior, Duties
-Previously it was mentioned that a pawn's ThinkTree is mostly static (the previous section describes changes that are always present), saving for that pawn's duty. But what is a duty? It is a DutyDef, but from the pawn's perspective it is a ThinkTree and a cell (called the focus). This is how to have Pawns perform higher, more organized actions than a simple Job; especially when combined with the focus or via repetition. An example duty is listed below, that for AI pawn following
+Previously it was mentioned that a pawn's ThinkTree is mostly static (the previous section describes changes that are always present), saving for that pawn's duty. But what is a duty? It is a DutyDef, but from the pawn's perspective it is a ThinkTree and a cell (called the focus). This is how to have Pawns perform higher, more organized actions than a simple Job; especially when combined with the focus or via repetition. An example duty is listed below, that for AI pawn following a character
 ```xml
 <DutyDef>
   <defName>Follow</defName>
@@ -184,4 +184,4 @@ Previously it was mentioned that a pawn's ThinkTree is mostly static (the previo
   </thinkNode>
 </DutyDef>
 ```
-Following from previous discussion, this has a pawn follow the escortee, it then attempts to `SatisfyBasicNeedsAndWork` by loading the appropriate subTree with a distance restriction (how this works specifically is left to the reader), finally wandering in the vicinity of the duty location (focus). There is similarly a Duty for each of the various AI attacker styles, prisoner breaks, essentially any concerted set of tasks that a pawn will perform autonomously in response to some event / higher logic / raison d'être (sappers gonna sap). As to where Duties come from, well ... until next time!
+From above, this has a pawn follow the escortee, it then attempts to `SatisfyBasicNeedsAndWork` by loading the appropriate subTree with a distance restriction (how this works specifically is left to the reader), finally wandering in the vicinity of the duty location (focus). There is similarly a Duty for each of the various AI attacker styles, prisoner breaks, essentially any concerted set of tasks that a pawn will perform autonomously in response to some event / higher logic / raison d'être (sappers gonna sap). As to where Duties come from, well ... until next time!
