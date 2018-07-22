@@ -140,9 +140,9 @@ Each pawn will actually possess 2 ThinkTrees, their primary ThinkTree and a Cons
 </ThinkTreeDef>
 ```
 
-Thus the most pressing concerns for a Pawn are fleeing an explosion and their basic hostility response. 
+Thus the most pressing concerns for a Pawn are fleeing an explosion and their basic hostility response. Furthermore, a pawn's constant think tree is checked every certain ticks (30 in B18), and will override pawn's current job if it returns a valid job.
 
-*NOTE* When drafted, a pawn will not evaluate their constant ThinkTree, as their autonomy has been removed.
+*NOTE* When drafted, a pawn will not evaluate their constant ThinkTree, as their autonomy has been removed. This is a property of the actual ThinkTree xml in RW and is accomplished via `ThinkNode_ConditionalCanDoConstantThinkTreeJobNow`
 
 *NOTE* Any logic placed in a ConstantThinkTree should be easily interruptible, preferably stateless
 
