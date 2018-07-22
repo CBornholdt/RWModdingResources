@@ -54,6 +54,8 @@ Similarly to the JobGivers, if JobOnThing returns a valid job then that job is t
 
 *NOTE* If you want to only allow actions taken directly by the player, require `forced == true` in the WorkGiver.
 
+*NOTE* To enable proper micro-managing behavior, ensure the passing of the `forced` parameter to the `CanReserve()` and `CanReachAndReserve()` methods.
+
 ## Determining Pawn behavior
 In short, a Pawn will evaluate a set of JobGivers/WorkGivers and will execute the first valid job that is returned. Thus, the entirety of RW pawn behavior can be reduced to 2 characteristics: whether any given JobGiver/WorkGiver is valid for that pawn, and the order in which these Givers are checked. The former has been discussed, and the latter is contained within a Pawn's ThinkTree.
 
